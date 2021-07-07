@@ -8,7 +8,7 @@ This Terraform module deploys an Application Service Plan on Azure
 
 ### NOTES
 
-* A Basic SKU is created by default.
+* A Basic SKU Tier is created by default.
 
 ## Usage in Terraform 1.0
 
