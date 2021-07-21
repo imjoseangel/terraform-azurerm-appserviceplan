@@ -41,4 +41,10 @@ resource "azurerm_app_service_plan" "main" {
   }
 
   tags = merge({ "ResourceName" = format("%s-%s", var.prefix, lower(replace(var.name, "/[[:^alnum:]]/", ""))) }, var.tags, )
+
+  lifecycle {
+    ignore_changes = [
+      tags
+    ]
+  }
 }
