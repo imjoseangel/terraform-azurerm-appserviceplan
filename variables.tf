@@ -23,7 +23,7 @@ variable "prefix" {
   default     = "default"
 }
 
-variable "kind" {
+variable "os_type" {
   description = "The kind of the App Service Plan to create. See documentation https://www.terraform.io/docs/providers/azurerm/r/app_service_plan.html#kind"
   type        = string
   default     = "Windows"
@@ -35,16 +35,10 @@ variable "reserved" {
   default     = "false"
 }
 
-variable "tier" {
-  description = "(Required) Specifies the plan's pricing tier."
+variable "sku_name" {
+  description = "(Required) The SKU for the Plan."
   type        = string
-  default     = "Basic"
-}
-
-variable "size" {
-  description = "(Required) Specifies the plan's instance size."
-  type        = string
-  default     = "B1"
+  default     = "P1V3"
 }
 
 variable "tags" {
